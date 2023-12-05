@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -9,13 +10,6 @@ public class Ifstatementsscripts : MonoBehaviour
     float hotLimitemperature = 70.0f;
     float coldLimitTemperature = 40.0f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -34,17 +28,32 @@ public class Ifstatementsscripts : MonoBehaviour
         }
         // If it  isn't, but the coffee temperature is less than the coldest drinking temperature...
         else if (coffetemperature < coldLimitTemperature)
-
+        {
             // ... do this.
             print("Coffee is too cold.");
         }
+
+
         //  If it is  neither of those then...
         else
         {
+            // ... do this.
+            print("Coffee is just right.");
+        }
 
-             // ... do this.
-             print("Coffee is just right.");
+    }
+
 }
+
+
+    
+
+        
+        
+
+            
+           
+
     
 
 
